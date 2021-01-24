@@ -103,7 +103,7 @@
         "prefix": "ams.createApiAction",
         "body": [
             "ams.createApiAction({",
-            "    getOptions: '$1',", 
+            "    getOptions: '$1',",
             "    beforeRequest: '$2',",
             "    success: '$3'",
             "})$0"
@@ -114,7 +114,7 @@
         "prefix": "ams.request",
         "body": [
             "ams.request({",
-            "    method: '$1',", 
+            "    method: '$1',",
             "    url: '$2',",
             "    data: '$3',",
             "    params: '$4',",
@@ -145,7 +145,7 @@
         "prefix": "ams.deepCloneConfig",
         "body": [
             "ams.deepCloneConfig({",
-            "    $1", 
+            "    $1",
             "})$0"
         ],
         "description": "AMS内置方法-通过base简化配置"

@@ -81,9 +81,7 @@ export default {
     wait({ $arg }) {
         return new Promise((resolve, reject) => {
             // console.log(this.block.data)
-            setTimeout(() => {
-                resolve();
-            }, $arg || 0);
+            setTimeout(resolve, $arg || 0);
         });
     },
     // block-imagelist 全选 操作

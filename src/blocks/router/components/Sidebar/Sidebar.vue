@@ -26,6 +26,7 @@ import SidebarItem from './SidebarItem';
 
 export default {
     components: { SidebarItem },
+    inject: ['$block'],
     props: {
         router: {
             type: Object,
@@ -36,7 +37,6 @@ export default {
             required: true
         }
     },
-    inject: ['$block'],
     computed: {
         uniqueOpened() {
             if (this.$block.block.router && this.$block.block.router.uniqueOpened) {

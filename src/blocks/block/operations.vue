@@ -9,9 +9,12 @@
                     <i class="el-icon-info ams-form-label-info el-form-item__label"></i>
                     <div slot="content" v-html="operation.info"></div>
                 </el-tooltip>
-                <label v-if="operation.label && !/^(?:button|reset|icon|text)$/.test(operation.type)"
-                class="el-form-item__label">{{operation.label}}</label>
+                <label
+                    v-if="operation.label && !/^(?:button|reset|icon|text)$/.test(operation.type)"
+                    class="el-form-item__label">{{operation.label}}</label>
                 <div class="el-form-item__content">
+                    <!-- name: blockName -->
+                    <!-- ams-operation-button -->
                     <component :is="'ams-operation-' + getOpType(operation.type)"
                                :name="name"
                                :operation-key="operationKey"
@@ -33,7 +36,9 @@ import mixins from '../../ams/mixins';
 const operationTypes = ['button', 'dropdown', 'icon', 'reset', 'text']; // TODO 这里列出了部分不需要处理的operations类型
 export default {
     mixins: [mixins.getShowState, mixins.getField],
+    inject: ['$block'],
     props: {
+        // name(blockName) 即 ams.block(blockName, blockConfig)
         name: {
             type: String,
             default: '',
@@ -54,7 +59,6 @@ export default {
         }
     },
 
-    inject: ['$block'],
     // data() {
     //     return {
     //         isInit: true

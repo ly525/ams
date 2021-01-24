@@ -49,35 +49,35 @@ ams.block('demo', {
                         on: {
                             change(val) {
                                 switch(val) {
-                                    case 'a': 
+                                    case 'a':
                                         this.callAction('chart1.changeData', {
                                             series1: [680, 500, 50, 30, 65, 57],
                                             series2: [190, 155, 20, 25, 26, 16],
                                             series3: [28, 30, 28, 32, 25, 5]
                                         })
                                         return;
-                                    case 'b': 
+                                    case 'b':
                                         this.callAction('chart1.changeData', {
                                             series1: [180, 200, 350, 300, 605, 257],
                                             series2: [290, 255, 120, 125, 126, 76],
                                             series3: [18, 50, 45, 30, 65, 57]
                                         })
                                         return;
-                                    case 'c': 
+                                    case 'c':
                                         this.callAction('chart1.changeData', {
                                             series1: [280, 120, 150, 350, 165, 157],
                                             series2: [290, 255, 120, 125, 126, 76],
                                             series3: [18, 50, 45, 30, 65, 57]
                                         })
                                         return;
-                                    case 'd': 
+                                    case 'd':
                                         this.callAction('chart1.changeData', {
                                             series1: [380, 120, 95, 230, 265, 357],
                                             series2: [290, 255, 120, 125, 126, 76],
                                             series3: [18, 50, 45, 30, 65, 57]
                                         })
                                         return;
-                                    case 'e': 
+                                    case 'e':
                                         this.callAction('chart1.changeData', {
                                             series1: [190, 230, 310, 200, 60, 57],
                                             series2: [290, 255, 120, 125, 126, 76],

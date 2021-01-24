@@ -57,12 +57,12 @@ import mixins from '../../ams/mixins';
 
 export default {
     mixins: [mixins.fieldEditArrayMixin],
+    inject: ['fieldChange'],
     data() {
         return {
             showOperationIndex: -1
         };
     },
-    inject: ['fieldChange'],
     computed: {
         maxLimit() {
             return this.field.props && this.field.props.max;

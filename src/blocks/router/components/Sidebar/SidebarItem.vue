@@ -52,6 +52,7 @@ export default {
     name: 'SidebarItem',
     components: { AppLink },
     //   mixins: [FixiOSBug],
+    inject: ['$block'],
     props: {
         // route object
         item: {
@@ -59,7 +60,6 @@ export default {
             required: true
         }
     },
-    inject: ['$block'],
     methods: {
         resolvePath(item) {
             const to = {

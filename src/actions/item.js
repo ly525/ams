@@ -5,7 +5,7 @@ import ams from '../ams';
 let currentParentBlock;
 
 const WRAP_BLOCK_NAME = '$amsWrapItemBlock';
-const FROM_BLOCK_NAME = `${WRAP_BLOCK_NAME}From`;
+const FORM_BLOCK_NAME = `${WRAP_BLOCK_NAME}Form`;
 
 /**
  * @param {object} blockConfig
@@ -38,7 +38,7 @@ export function commonHandlerItem({ blockConfig, type, resource, insertType, $pr
             },
             events: {
                 cancel: '@hide @remove',
-                submit: `@${FROM_BLOCK_NAME}.validate @${FROM_BLOCK_NAME}.${type === 'add' ? 'create' : 'update'} @${currentParentBlock}.list @hide @remove`
+                submit: `@${FORM_BLOCK_NAME}.validate @${FORM_BLOCK_NAME}.${type === 'add' ? 'create' : 'update'} @${currentParentBlock}.list @hide @remove`
             },
             actions: {
                 remove() {
@@ -48,7 +48,7 @@ export function commonHandlerItem({ blockConfig, type, resource, insertType, $pr
                 }
             },
             blocks: {
-                [FROM_BLOCK_NAME]: {
+                [FORM_BLOCK_NAME]: {
                     type: 'form',
                     ctx: 'edit',
                     resource: resource || this.resource,

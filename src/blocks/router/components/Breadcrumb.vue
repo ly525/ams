@@ -15,12 +15,12 @@
 
 <script>
 export default {
+    inject: ['$block'],
     data() {
         return {
             levelList: null
         };
     },
-    inject: ['$block'],
     watch: {
         $route() {
             this.getBreadcrumb();
