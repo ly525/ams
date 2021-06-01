@@ -31,7 +31,8 @@ export function commonHandlerItem({ blockConfig, type, resource, insertType, $pr
                 is: 'div'
             },
             props: {
-                id: WRAP_BLOCK_NAME
+                id: WRAP_BLOCK_NAME,
+                ...dialogProps
             },
             style: {
                 padding: ['dialog', 'drawer'].includes(insertType) ? '0' : '20px 0'
